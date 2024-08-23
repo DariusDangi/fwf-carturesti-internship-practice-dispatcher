@@ -45,13 +45,6 @@
     "fileInfoCollection": [
       {
         "editingStatus": "InProgress",
-        "testCaseId": "d28895e3-986e-4e7e-8263-9be7c8aa7bbd",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\GetTransactionDataTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
         "testCaseId": "d8dda65b-4b9f-4217-8f0a-76cb3f5165af",
         "testCaseType": "TestCase",
         "executionTemplateType": "Local",
@@ -87,17 +80,66 @@
       },
       {
         "editingStatus": "InProgress",
+        "testCaseId": "88969eea-86f1-4af1-a9bb-b44b96f6ba71",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Chrome\\Carturesti\\TestCase_Chrome_Carturesti_WriteOutputReport.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
         "testCaseId": "c93b4758-254f-4cdb-84e6-ed600db52ace",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
-        "fileName": "Tests\\TestCase_Chrome_Carturesti_NavigateToSFBooks.xaml"
+        "fileName": "Tests\\Chrome\\Carturesti\\TestCase_Chrome_Carturesti_NavigateToSFBooks.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "acac75c3-7942-4b92-9846-d22e0ee65d78",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Chrome\\Carturesti\\TestCase_Chrome_Carturesti_GetBookDetails.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "47337f88-8686-4aa9-b507-9fa65b4bc629",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Chrome\\Carturesti\\TestCase_Chrome_Carturesti_ExtractBooks.xaml"
       },
       {
         "editingStatus": "InProgress",
         "testCaseId": "f3eb29ca-e695-4737-8969-ba448fa62749",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
-        "fileName": "Tests\\TestCase_Chrome_Carturesti_ApplyFilters.xaml"
+        "fileName": "Tests\\Chrome\\Carturesti\\TestCase_Chrome_Carturesti_ApplyFilters.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "2eae55ca-95db-46fe-aac8-933c1b4ab120",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Chrome\\eMAG\\TestCase_Chrome_eMAG_NavigateToSFBooks.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "910191f5-1c84-4414-92a7-38bc1ca47c7e",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Chrome\\eMAG\\TestCase_Chrome_eMAG_ApplyFilters.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "6895feb3-c227-4806-b0e6-678ac2c0cd06",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Chrome\\eMAG\\TestCase_Carturesti_eMAG_ExtractBooks.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "2e3554fb-2973-456e-9a2e-1f61b90e5e38",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Tests\\Chrome\\eMAG\\TestCase_Chrome_eMAG_GetBookDetails.xaml"
       }
     ],
     "saveToCloud": false

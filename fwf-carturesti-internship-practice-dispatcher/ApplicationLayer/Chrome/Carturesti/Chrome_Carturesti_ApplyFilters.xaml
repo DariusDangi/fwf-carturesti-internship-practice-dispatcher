@@ -1,0 +1,291 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Chrome_Carturesti_ApplyFilters" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="io_BrowserUI" Type="InOutArgument(ui:UiElement)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>870,1766</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Chrome_Carturesti_ApplyFilters_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows.Media</x:String>
+      <x:String>System.Windows.Threading</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Windows.Presentation</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Applies the desired filters: &#xA;-year of publish : 2023&#xA;-availability - in stock&#xA;- price ascending&#xA;- 60 items per page" DisplayName="Chrome_Carturesti_ApplyFilters" sap:VirtualizedContainerService.HintSize="512,1701" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Apply Filters in Carturesti" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Applying filters in Carturesti SF books tab&quot;]" />
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Chrome-Carturesti-App" sap:VirtualizedContainerService.HintSize="450,1353" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_BrowserUI]" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[io_BrowserUI]" ScopeGuid="f77e95e6-47d6-495f-8597-bccd0ee6f24b" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1193" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NSelectItem DelayBefore="[cint(in_Config(&quot;DelayForFilters&quot;).ToString)]" DisplayName="Select Ascending Price" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="[in_Config(&quot;Carturesti_SortBy&quot;).ToString]" ScopeIdentifier="f77e95e6-47d6-495f-8597-bccd0ee6f24b" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="9">
+                  <x:String>Smart</x:String>
+                  <x:String>Preț (ascendent)</x:String>
+                  <x:String>Preț (descendent)</x:String>
+                  <x:String>Alfabetic (ascendent)</x:String>
+                  <x:String>Alfabetic (descendent)</x:String>
+                  <x:String>Noutate (cele mai vechi)</x:String>
+                  <x:String>Noutate (cele mai noi)</x:String>
+                  <x:String>Discount (ascendent)</x:String>
+                  <x:String>Discount (descendent)</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177" CVScreenId="7ea95be9-70fc-4570-81ba-21a1c07333ef" CvElementArea="1219, 327, 212, 35" CvType="InputBox" DesignTimeRectangle="1221, 324, 209, 37" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='select_value_label_36' tag='MD-SELECT-VALUE' /&gt;" FuzzySelectorArgument="&lt;webctrl id='select_value_label_36' tag='MD-SELECT-VALUE' type='' class='md-select-value' aaname='' check:innerText='Smart' /&gt;" Guid="a2ebcc72-c645-4295-a705-26acbe86fb96" InformativeScreenshot="499182484c6ee6caf92554bc64933c16.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="7ea95be9-70fc-4570-81ba-21a1c07333ef" CvTextArea="1219, 310, 52, 12" CvTextArgument="Sortare" CvType="Text" DesignTimeRectangle="1219, 309, 52, 13" ElementType="Text" Guid="6da4394c-aebe-46eb-aec0-138a0ab4f612" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NSelectItem DelayBefore="[cint(in_Config(&quot;DelayForFilters&quot;).ToString)]" DisplayName="Select Quantity of Books per Page" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="[in_Config(&quot;Carturesti_BooksPerPage&quot;).ToString]" ScopeIdentifier="f77e95e6-47d6-495f-8597-bccd0ee6f24b" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="3">
+                  <x:String>30</x:String>
+                  <x:String>60</x:String>
+                  <x:String>90</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177?sort-by=price%20asc" CVScreenId="b65695a9-2adc-481e-81f8-ce08207a0e6a" CvElementArea="1358, 261, 171, 29" CvType="InputBox" DesignTimeRectangle="1361, 261, 167, 30" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='select_value_label_33' tag='MD-SELECT-VALUE' /&gt;" FuzzySelectorArgument="&lt;webctrl id='select_value_label_33' tag='MD-SELECT-VALUE' type='' class='md-select-value' aaname='' /&gt;" Guid="ed2f7c0c-fd1b-4909-b447-b275b23295ba" ImageBase64="" InformativeScreenshot="c5323cfc5c69f6b34f2ba7d252d0dc1c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="b65695a9-2adc-481e-81f8-ce08207a0e6a" CvTextArea="1361, 248, 54, 13" CvTextArgument="Pe pagina" CvType="Text" DesignTimeRectangle="1361, 248, 54, 13" ElementType="Text" Guid="d7a64200-402b-4089-829d-e62ddb15855b" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="[cint(in_Config(&quot;DelayForFilters&quot;).ToString)]" DisplayName="Select In Stock Availability" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f77e95e6-47d6-495f-8597-bccd0ee6f24b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177?per-page=60&amp;sort-by=price%20asc" CVScreenId="adccc918-5840-4aef-8833-3b0b59135e9f" CvTextArea="289, 914, 129, 18" CvTextArgument="In stoc - livrare 24h" CvType="Text" DesignTimeRectangle="291, 666, 128, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='coloana-filtre' aaname='În stoc - livrare 24h' parentclass='md-label' /&gt;" Guid="063627f1-7cfb-4a5b-8291-f69a44ddc392" InformativeScreenshot="dfedeea53bba145220cb469709cb1919.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="adccc918-5840-4aef-8833-3b0b59135e9f" CvTextArea="254, 880, 141, 20" CvTextArgument="Disponibil online" CvType="Text" DesignTimeRectangle="246, 617, 225, 31" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Disponibil online' parentid='coloana-filtre' parentclass='ng-scope' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Disponibil online' parentid='coloana-filtre' parentclass='ng-scope' tag='H5' type='' class='ng-binding ng-scope' check:text='Disponibil online' /&gt;" Guid="5c0e4a4e-d609-4eb0-ba93-39410f1fea27" SearchSteps="Selector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Element 'În stoc - livrare 24h'" Mode="Appears" Retry="True">
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177?stock_label=in-stoc,la-comanda,stoc-limitat&amp;data_publicarii=2023&amp;per-page=60&amp;sort-by=price%20asc" CVScreenId="d9e89b4a-6fbf-4d69-b850-3a8639e5a6a2" CvElementArea="394, 532, 24, 23" CvType="CheckBox" DesignTimeRectangle="396, 533, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='coloana-filtre' parentclass='ng-pristine ng-untouched ng-valid ng-scope md-checked ng-not-empty' /&gt;" Guid="66f66cc3-20ea-4803-ba4e-c4f866b93671" InformativeScreenshot="c7e2e70d3667911df4994cef761991d9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="d9e89b4a-6fbf-4d69-b850-3a8639e5a6a2" CvTextArea="424, 533, 104, 15" CvTextArgument="In stoc - livrare 24h" CvType="Text" DesignTimeRectangle="426, 535, 102, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='coloana-filtre' aaname='În stoc - livrare 24h' parentclass='md-label' /&gt;" Guid="1766ba4d-7b58-4bd7-aa3d-f1d54d121d9d" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="[cint(in_Config(&quot;DelayForFilters&quot;).ToString)]" DisplayName="Select supplier stock" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f77e95e6-47d6-495f-8597-bccd0ee6f24b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177?stock_label=in-stoc,la-comanda,stoc-limitat&amp;per-page=60&amp;sort-by=price%20asc" CVScreenId="c0eabda4-68f6-4611-8cd7-09f3d5753106" CvTextArea="289, 449, 91, 16" CvTextArgument="Stoc furnizor" CvType="Text" DesignTimeRectangle="291, 448, 88, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Stoc furnizor' parentid='coloana-filtre' parentclass='md-label' /&gt;" Guid="96f0471d-b987-4b1c-a955-01c860f4f84b" InformativeScreenshot="d10413fad7557bf190393db7c8e37ced.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="c0eabda4-68f6-4611-8cd7-09f3d5753106" CvTextArea="252, 380, 142, 20" CvTextArgument="Disponibil online" CvType="Text" DesignTimeRectangle="246, 367, 225, 31" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Disponibil online' parentid='coloana-filtre' parentclass='ng-scope' /&gt;" FuzzySelectorArgument="&lt;webctrl parentname='filterForm' tag='H5' type='' class='ng-binding ng-scope' aaname='Disponibil online' check:innerText='Disponibil online' /&gt;" Guid="0a773f7c-cfa9-4973-bac5-67dd29780222" SearchSteps="Selector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Element 'Stoc furnizor'" Mode="Appears" Retry="True">
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177?stock_label=in-stoc,la-comanda,stoc-limitat&amp;per-page=60&amp;sort-by=price%20asc" CVScreenId="dd23ed98-9f9f-46c5-97d5-4e13ff343e07" CvElementArea="394, 578, 24, 24" CvType="CheckBox" DesignTimeRectangle="396, 580, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='coloana-filtre' parentclass='ng-pristine ng-untouched ng-valid ng-scope md-checked ng-not-empty' /&gt;" Guid="517b0522-2021-40af-9318-7620d5a7a04f" ImageBase64="" InformativeScreenshot="c21300a89b9b27aaab1d8e4979f84b2c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                          <uix:Target CVScreenId="dd23ed98-9f9f-46c5-97d5-4e13ff343e07" CvTextArea="424, 583, 74, 13" CvTextArgument="Stoc fumizor" CvType="Text" DesignTimeRectangle="426, 583, 70, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Stoc furnizor' parentid='coloana-filtre' parentclass='md-label' /&gt;" Guid="7d093af6-751b-4bda-b9ff-0c199de4dced" SearchSteps="Selector, CV" />
+                          <uix:Target CVScreenId="dd23ed98-9f9f-46c5-97d5-4e13ff343e07" CvTextArea="425, 608, 72, 13" CvTextArgument="Precomanda" CvType="Text" DesignTimeRectangle="426, 608, 71, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Precomandă' parentid='coloana-filtre' parentclass='md-label' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Precomandă' parentid='coloana-filtre' parentclass='md-label' tag='SPAN' type='' class='ng-binding ng-scope' check:text='Precomandă' /&gt;" Guid="dd8daa4e-5e4a-4694-aab8-6313bd643de9" SearchSteps="Selector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NMouseScroll KeyModifiers="{x:Null}" DelayBefore="[cint(in_Config(&quot;DelayForFilters&quot;).ToString)]" Direction="Down" DisplayName="Sroll down to Year of Publish" sap:VirtualizedContainerService.HintSize="354,57" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" MovementUnits="1" Version="V3">
+              <uix:NMouseScroll.SearchedElement>
+                <uix:SearchedElement>
+                  <uix:SearchedElement.Target>
+                    <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177?stock_label=in-stoc,la-comanda,stoc-limitat&amp;per-page=60&amp;sort-by=price%20asc" CVScreenId="69e3b624-5405-4804-a022-aa379df5ba6e" CvTextArea="424, 445, 30, 12" CvTextArgument="2023" CvType="Text" DesignTimeRectangle="426, 444, 28, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='2023' parentid='coloana-filtre' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='2023' parentid='coloana-filtre' tag='SPAN' type='' class='ng-binding ng-scope' check:innerText='2023' /&gt;" Guid="cfb704cb-ed3a-43af-94ec-2ceb13d17871" InformativeScreenshot="ddd4e0c508c2276f910936e39856cf50.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target CVScreenId="69e3b624-5405-4804-a022-aa379df5ba6e" CvTextArea="392, 379, 109, 17" CvTextArgument="Data publicarii" CvType="Text" DesignTimeRectangle="390, 376, 180, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Data publicarii' parentid='coloana-filtre' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Data publicarii' parentid='coloana-filtre' tag='LABEL' type='' class='ng-binding' check:innerText='Data publicarii' /&gt;" Guid="68e9cad8-ae34-4ada-9073-30e25d406c2b" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:SearchedElement.Target>
+                  <uix:SearchedElement.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:SearchedElement.Timeout>
+                </uix:SearchedElement>
+              </uix:NMouseScroll.SearchedElement>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NMouseScroll>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="[cint(in_Config(&quot;DelayForFilters&quot;).ToString)]" DisplayName="Select YearOfPublish" sap:VirtualizedContainerService.HintSize="354,218" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f77e95e6-47d6-495f-8597-bccd0ee6f24b" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177?stock_label=in-stoc,la-comanda,stoc-limitat&amp;per-page=60&amp;sort-by=price%20asc" CVScreenId="7f4830b0-8189-4111-a727-e50c720eac41" CvTextArea="289, 685, 37, 13" CvTextArgument="2023" CvType="Text" DesignTimeRectangle="291, 682, 35, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='2023' parentid='coloana-filtre' tag='SPAN' /&gt;" Guid="4a21caad-6f29-4db9-adf5-b7e7b0d71e86" ImageBase64="" InformativeScreenshot="ad0e1d95ddf27817c5ceef8cc5b11cf3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="7f4830b0-8189-4111-a727-e50c720eac41" CvTextArea="249, 599, 136, 22" CvTextArgument="Data publicarii" CvType="Text" DesignTimeRectangle="246, 595, 225, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Data publicarii' parentid='coloana-filtre' parentclass='ng-scope' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Data publicarii' parentid='coloana-filtre' parentclass='ng-scope' tag='LABEL' type='' class='ng-binding' check:text='Data publicarii' /&gt;" Guid="cf5cd55a-1458-44b7-b197-d7e1e6d7c5aa" SearchSteps="Selector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Element '2023'" Mode="Appears" Retry="True">
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177?stock_label=in-stoc,la-comanda,stoc-limitat&amp;data_publicarii=2023&amp;per-page=60&amp;sort-by=price%20asc" CVScreenId="73ed420e-08dd-4d33-91a8-733b3da64aa1" CvElementArea="394, 358, 23, 24" CvType="CheckBox" DesignTimeRectangle="396, 359, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;filter-form&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;md-checkbox&amp;gt;div' idx='51' parentid='coloana-filtre' parentname='filterForm' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='md-container md-ink-ripple' parentid='coloana-filtre' parentname='filterForm' tag='DIV' aaname='' /&gt;" Guid="922239fc-8b1a-45d3-b852-a5500c04e0eb" InformativeScreenshot="4410640a0b012d345dd247dddd3d2517.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                          <uix:Target CVScreenId="73ed420e-08dd-4d33-91a8-733b3da64aa1" CvTextArea="424, 363, 30, 12" CvTextArgument="2023" CvType="Text" DesignTimeRectangle="426, 362, 28, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='2023' parentid='coloana-filtre' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='2023' parentid='coloana-filtre' tag='SPAN' type='' class='ng-binding ng-scope' check:innerText='2023' /&gt;" Guid="dcec8f81-687a-4c14-a7cb-caeb06ccaa9e" SearchSteps="FuzzySelector, CV" />
+                          <uix:Target CVScreenId="913f767a-c634-4c85-91a8-30dc5bf5a911" CvTextArea="424, 388, 30, 12" CvTextArgument="2022" CvType="Text" DesignTimeRectangle="426, 387, 27, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='2022' parentid='coloana-filtre' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='2022' parentid='coloana-filtre' tag='SPAN' type='' class='ng-binding ng-scope' check:innerText='2022' /&gt;" Guid="859fb8f2-47db-4eb8-a546-61a59f1f356a" SearchSteps="FuzzySelector, CV" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
