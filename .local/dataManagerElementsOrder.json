@@ -14,16 +14,10 @@
       "VariablesSectionElementsOrder": [
         "eMAGBrowser&StateMachine_1",
         "carturestiBrowser&StateMachine_1",
-        "TransactionItem&StateMachine_1",
         "SystemException&StateMachine_1",
         "BusinessException&StateMachine_1",
-        "TransactionNumber&StateMachine_1",
         "Config&StateMachine_1",
         "RetryNumber&StateMachine_1",
-        "TransactionField2&StateMachine_1",
-        "TransactionField1&StateMachine_1",
-        "TransactionID&StateMachine_1",
-        "dt_TransactionData&StateMachine_1",
         "ConsecutiveSystemExceptions&StateMachine_1"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -95,9 +89,7 @@
     {
       "Path": "ApplicationLayer/Chrome/Carturesti/Chrome_Carturesti_ExtractBooks.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "ExtractDataTable&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_Config",
         "io_BrowserUi",
@@ -122,6 +114,7 @@
       "Path": "ApplicationLayer/Chrome/Carturesti/Chrome_Carturesti_GetBookDetails.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "reference&Sequence_12",
         "currentIndex&Sequence_1",
         "title&Sequence_8",
         "author&Sequence_8",
@@ -153,18 +146,6 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "ApplicationLayer/Chrome/Carturesti/Chrome_Carturesti_WriteOutputReport.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "outputReportExists&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [
-        "in_Config"
-      ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
       "Path": "Tests/Chrome/Carturesti/TestCase_Chrome_Carturesti_WriteOutputReport.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
@@ -184,16 +165,6 @@
         "out_dteMAG",
         "out_dtCarturesti"
       ],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
-      "Path": "Tests/TestCase_CreateOutputReport.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "config&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     },
@@ -265,9 +236,7 @@
     {
       "Path": "DataLayer/UploadQueueItems.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "strTestCarturesti&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
         "in_Config",
         "in_dteMAG",
@@ -280,6 +249,7 @@
       "Path": "ApplicationLayer/Chrome/eMAG/Chrome_eMAG_GetBookDetails.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "reference&Sequence_3",
         "author&Sequence_3",
         "title&Sequence_3",
         "price&Sequence_3",
@@ -305,7 +275,6 @@
         "dteMAGBooks&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_TransactionItem",
         "in_Config",
         "io_CarturestiBrowser",
         "io_eMAGBrowser"
@@ -346,6 +315,71 @@
         "in_Config",
         "io_BrowserUI",
         "out_dtBooksURL"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_eMAGBrowser",
+        "in_CarturestiBrowser",
+        "in_BusinessException",
+        "in_SystemException",
+        "in_Config",
+        "io_RetryNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "BusinessLayer/Carturesti_NavigateToAndGetBooks.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtBooksURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_dtCarturestiBooks",
+        "io_CarturestiBrowser"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ApplicationLayer/Chrome/Chrome_NavigateToBookURL.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_CurrentURL",
+        "io_BrowserUI"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "out_CarturestiBrowser",
+        "out_eMAGBrowser"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
