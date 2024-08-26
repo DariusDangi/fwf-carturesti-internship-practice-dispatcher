@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>876,4131</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1056,4416</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Chrome_Carturesti_GetBookDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,7 +119,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="After the DT has been populated with the URLs to book pages, this workflow will acces each URL to get the book details, such as :&#xA;-Title&#xA;-Author&#xA;-Price&#xA;-Language&#xA;-Number of Pages " DisplayName="Chrome_Carturesti_GetBookDetails" sap:VirtualizedContainerService.HintSize="788,3912" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="After the DT has been populated with the URLs to book pages, this workflow will acces each URL to get the book details, such as :&#xA;-Title&#xA;-Author&#xA;-Price&#xA;-Language&#xA;-Number of Pages " DisplayName="Chrome_Carturesti_GetBookDetails" sap:VirtualizedContainerService.HintSize="790,4351" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="currentIndex" />
     </Sequence.Variables>
@@ -129,8 +129,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Get Book Details" sap:VirtualizedContainerService.HintSize="726,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Getting specific details from all selected books.&quot;]" />
-    <Assign DisplayName="Initialise Carturesti DataTable" sap:VirtualizedContainerService.HintSize="726,114" sap2010:WorkflowViewState.IdRef="Assign_12">
+    <ui:LogMessage DisplayName="Log Message Get Book Details" sap:VirtualizedContainerService.HintSize="728,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Getting specific details from all selected books.&quot;]" />
+    <Assign DisplayName="Initialise Carturesti DataTable" sap:VirtualizedContainerService.HintSize="728,114" sap2010:WorkflowViewState.IdRef="Assign_12">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[out_dtCarturestiBooks]</OutArgument>
       </Assign.To>
@@ -138,7 +138,7 @@
         <InArgument x:TypeArguments="sd:DataTable">[new DataTable]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Column of Carturesti Data Table" sap:VirtualizedContainerService.HintSize="726,443" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Config(&quot;CarturestiDT_Columns&quot;).ToString.Split(&quot;,&quot;c)]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Column of Carturesti Data Table" sap:VirtualizedContainerService.HintSize="728,443" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Config(&quot;CarturestiDT_Columns&quot;).ToString.Split(&quot;,&quot;c)]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
@@ -155,14 +155,14 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Reference" DataTable="[out_dtCarturestiBooks]" DisplayName="Add Reference Column to CarturestiDT" sap:VirtualizedContainerService.HintSize="726,218" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
-    <ui:ForEachRow ColumnNames="{x:Null}" DataTable="[in_dtBooksURL]" DisplayName="For Each URL in DataTable" sap:VirtualizedContainerService.HintSize="726,2774" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Reference" DataTable="[out_dtCarturestiBooks]" DisplayName="Add Reference Column to CarturestiDT" sap:VirtualizedContainerService.HintSize="728,218" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
+    <ui:ForEachRow ColumnNames="{x:Null}" DataTable="[in_dtBooksURL]" DisplayName="For Each URL in DataTable" sap:VirtualizedContainerService.HintSize="728,3213" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentURL" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="For each URL do this" sap:VirtualizedContainerService.HintSize="692,2587" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="For each URL do this" sap:VirtualizedContainerService.HintSize="694,3026" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="title" />
               <Variable x:TypeArguments="x:String" Name="author" />
@@ -175,19 +175,19 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Chrome_NavigateToBookURL - Invoke Workflow File (ApplicationLayer\Chrome\Chrome_NavigateToBookURL.xaml)" sap:VirtualizedContainerService.HintSize="630,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ApplicationLayer\Chrome\Chrome_NavigateToBookURL.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Chrome_NavigateToBookURL - Invoke Workflow File (ApplicationLayer\Chrome\Chrome_NavigateToBookURL.xaml)" sap:VirtualizedContainerService.HintSize="632,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ApplicationLayer\Chrome\Chrome_NavigateToBookURL.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_BrowserUI">[io_BrowserUI]</InOutArgument>
                 <InArgument x:TypeArguments="sd:DataRow" x:Key="in_CurrentURL">[CurrentURL]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome-Carturesti-GetBookDetails" sap:VirtualizedContainerService.HintSize="630,2295" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[io_BrowserUI]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome-Carturesti-GetBookDetails" sap:VirtualizedContainerService.HintSize="632,2734" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[io_BrowserUI]" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Get details" sap:VirtualizedContainerService.HintSize="596,2135" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Get details" sap:VirtualizedContainerService.HintSize="598,2574" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="reference" />
                     </Sequence.Variables>
@@ -196,7 +196,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NGetText DisplayName="Get Title" sap:VirtualizedContainerService.HintSize="534,189" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" TextString="[Title]" Version="V3">
+                    <uix:NGetText DisplayName="Get Title" sap:VirtualizedContainerService.HintSize="536,189" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" TextString="[Title]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://carturesti.ro/carte/guzanja-2653858962?p=60" CVScreenId="92c22f76-2d48-4b95-991e-a9086cb4895b" CvTextArea="877, 204, 117, 30" CvType="AnyWordGroup" DesignTimeRectangle="877, 200, 653, 33" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl class='titluProdus' parentclass='titlesContainer' /&gt;" Guid="81b0050c-8fd3-4648-b809-87e4df123a9e" ImageBase64="" InformativeScreenshot="d1e15e0c27a86b129f25cb8d312b6d81.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -207,19 +207,54 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <uix:NGetText DisplayName="Get Author" sap:VirtualizedContainerService.HintSize="534,189" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" TextString="[Author]" Version="V3">
-                      <uix:NGetText.Target>
-                        <uix:TargetAnchorable BrowserURL="https://carturesti.ro/carte/guzanja-2653858962?p=60" CVScreenId="c597d567-72c2-4883-ad4e-9b047b936bdc" CvTextArea="903, 233, 147, 18" CvType="AnyWordGroup" DesignTimeRectangle="901, 229, 152, 27" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentclass='autorProdus' /&gt;" Guid="c904474d-73ed-44f0-83a4-93f67390c7fa" ImageBase64="" InformativeScreenshot="f50d0eb4033e75eceeb81c75f2f3a4a6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
-                          <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
-                              <uix:Target CVScreenId="c597d567-72c2-4883-ad4e-9b047b936bdc" CvTextArea="389, 110, 83, 16" CvTextArgument="PRODUSE" CvType="Text" DesignTimeRectangle="390, 108, 82, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='buton-produse' aaname='Produse' parentclass='ng-scope' /&gt;" Guid="ba7b7602-dc36-4604-b892-2fea15448be7" SearchSteps="Selector, CV" />
-                              <uix:Target CVScreenId="c597d567-72c2-4883-ad4e-9b047b936bdc" CvTextArea="1168, 267, 78, 16" CvTextArgument="Nota ta: 0" CvType="Text" DesignTimeRectangle="1168, 268, 77, 15" FullSelectorArgument="&lt;webctrl aaname='Nota ta: ' parentclass='ratingText' /&gt;" Guid="b1c2a0bc-73d5-4ca3-a66b-9a3f5e37e59b" SearchSteps="Selector, CV" />
-                            </scg:List>
-                          </uix:TargetAnchorable.Anchors>
-                        </uix:TargetAnchorable>
-                      </uix:NGetText.Target>
-                    </uix:NGetText>
-                    <uix:NGetText DisplayName="Get Price" sap:VirtualizedContainerService.HintSize="534,189" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" TextString="[Price]" Version="V3">
+                    <TryCatch DisplayName="Try Catch Get Author" sap:VirtualizedContainerService.HintSize="536,636" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                      <TryCatch.Try>
+                        <uix:NGetText DisplayName="Get Author" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" TextString="[Author]" Version="V3">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://carturesti.ro/carte/guzanja-2653858962?p=60" CVScreenId="c597d567-72c2-4883-ad4e-9b047b936bdc" CvTextArea="903, 233, 147, 18" CvType="AnyWordGroup" DesignTimeRectangle="901, 229, 152, 27" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentclass='autorProdus' /&gt;" Guid="c904474d-73ed-44f0-83a4-93f67390c7fa" ImageBase64="" InformativeScreenshot="f50d0eb4033e75eceeb81c75f2f3a4a6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                  <uix:Target CVScreenId="c597d567-72c2-4883-ad4e-9b047b936bdc" CvTextArea="389, 110, 83, 16" CvTextArgument="PRODUSE" CvType="Text" DesignTimeRectangle="390, 108, 82, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='buton-produse' aaname='Produse' parentclass='ng-scope' /&gt;" Guid="ba7b7602-dc36-4604-b892-2fea15448be7" SearchSteps="Selector, CV" />
+                                  <uix:Target CVScreenId="c597d567-72c2-4883-ad4e-9b047b936bdc" CvTextArea="1168, 267, 78, 16" CvTextArgument="Nota ta: 0" CvType="Text" DesignTimeRectangle="1168, 268, 77, 15" FullSelectorArgument="&lt;webctrl aaname='Nota ta: ' parentclass='ratingText' /&gt;" Guid="b1c2a0bc-73d5-4ca3-a66b-9a3f5e37e59b" SearchSteps="Selector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502,442" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Assign Author as not assigned" sap:VirtualizedContainerService.HintSize="496,372" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:LogMessage DisplayName="Log Message No Author" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;Current book has no author.&quot;]" />
+                              <Assign DisplayName="Assign Author as N/A" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[author]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">N/A</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                    <uix:NGetText DisplayName="Get Price" sap:VirtualizedContainerService.HintSize="536,189" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" TextString="[Price]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://carturesti.ro/carte/guzanja-2653858962?p=60" CVScreenId="c1e4b687-7fff-4a0e-b0ab-19004119c833" CvTextArea="1283, 383, 75, 20" CvType="AnyWordGroup" DesignTimeRectangle="1284, 379, 73, 28" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='pret' parentclass='col-sm-6' /&gt;" Guid="3c8b3d95-1c0f-42b2-b8d7-d15a1495c844" ImageBase64="" InformativeScreenshot="3a0215b1bce69be2b5ea38cb18cc3665.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -230,7 +265,7 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <Assign DisplayName="Convert Price from String to Decimal" sap:VirtualizedContainerService.HintSize="534,114" sap2010:WorkflowViewState.IdRef="Assign_9">
+                    <Assign DisplayName="Convert Price from String to Decimal" sap:VirtualizedContainerService.HintSize="536,114" sap2010:WorkflowViewState.IdRef="Assign_9">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[Price]</OutArgument>
                       </Assign.To>
@@ -238,7 +273,7 @@
                         <InArgument x:TypeArguments="x:String">[(Cdbl(Price)/100).ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NGetText DisplayName="Get Book Language" sap:VirtualizedContainerService.HintSize="534,189" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" TextString="[BookLanguage]" Version="V3">
+                    <uix:NGetText DisplayName="Get Book Language" sap:VirtualizedContainerService.HintSize="536,189" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" TextString="[BookLanguage]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://carturesti.ro/carte/baiatul-din-munti-2587312221?p=2" CVScreenId="ccc6b205-424e-4059-81d4-e072998ab632" CvTextArea="926, 371, 54, 14" CvType="AnyWordGroup" DesignTimeRectangle="926, 368, 54, 22" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='DIV' type='' class='' /&gt;" Guid="b38f207e-909a-4f57-b07b-305448d652fc" InformativeScreenshot="f932ac90d1cfe18cccc818c8aa878a67.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -249,7 +284,7 @@
                         </uix:TargetAnchorable>
                       </uix:NGetText.Target>
                     </uix:NGetText>
-                    <TryCatch sap2010:Annotation.AnnotationText="There are books that won't give this information, so it might give an error." DisplayName="Try Getting NoP" sap:VirtualizedContainerService.HintSize="534,677" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                    <TryCatch sap2010:Annotation.AnnotationText="There are books that won't give this information, so it might give an error." DisplayName="Try Getting NoP" sap:VirtualizedContainerService.HintSize="536,667" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                       <TryCatch.Variables>
                         <Variable x:TypeArguments="x:Int32" Name="intNoP" />
                       </TryCatch.Variables>
@@ -269,7 +304,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <uix:NGetText DisplayName="Get NoP" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="7df56ee2-bd9a-4235-98f6-70b02d8d3a0a" TextString="[NoP]" Version="V3">
                             <uix:NGetText.Target>
-                              <uix:TargetAnchorable BrowserURL="https://carturesti.ro/carte/ferma-animalelor-2770300011?p=3" CVScreenId="39dda359-6c54-4374-bd6f-7b2944f9e32a" CvTextArea="946, 431, 23, 14" CvType="AnyWordGroup" DesignTimeRectangle="947, 428, 21, 22" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='*' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' type='' class='' /&gt;" Guid="a37e0c7c-e340-43fb-8943-c7f28c7b1864" ImageBase64="" InformativeScreenshot="46bd463899b976dff36efcb68bfa4ccf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete">
+                              <uix:TargetAnchorable BrowserURL="https://carturesti.ro/carte/ferma-animalelor-2770300011?p=3" CVScreenId="39dda359-6c54-4374-bd6f-7b2944f9e32a" CvTextArea="946, 431, 23, 14" CvType="AnyWordGroup" DesignTimeRectangle="947, 428, 21, 22" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='DIV' type='' class='' /&gt;" Guid="a37e0c7c-e340-43fb-8943-c7f28c7b1864" ImageBase64="" InformativeScreenshot="46bd463899b976dff36efcb68bfa4ccf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete">
                                 <uix:TargetAnchorable.Anchors>
                                   <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                     <uix:Target CVScreenId="39dda359-6c54-4374-bd6f-7b2944f9e32a" CvTextArea="877, 431, 65, 17" CvTextArgument="Nr. pagini:" CvType="Text" DesignTimeRectangle="877, 428, 70, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Nr. pagini: ' class='productAttrLabel' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Nr. pagini: ' class='productAttrLabel' tag='SPAN' type='' check:innerText='Nr. pagini:' /&gt;" Guid="115b3d2f-0549-4d00-83a0-c426bdc1f480" SearchSteps="Selector, FuzzySelector, CV" />
@@ -289,10 +324,10 @@
                         </Sequence>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="500,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="502,442" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
@@ -320,16 +355,16 @@
                         </Catch>
                       </TryCatch.Catches>
                     </TryCatch>
-                    <Assign DisplayName="Get Unique Reference" sap:VirtualizedContainerService.HintSize="534,114" sap2010:WorkflowViewState.IdRef="Assign_13">
+                    <Assign DisplayName="Get Unique Reference" sap:VirtualizedContainerService.HintSize="536,114" sap2010:WorkflowViewState.IdRef="Assign_13">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[reference]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">["0_"+DateTime.Now.ToString("HHmmssfff")+"_"+title.Length.ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String">[in_Config("Carturesti_Code").ToString+"_"+DateTime.Now.ToString("HHmmssfff")+"_"+title.Length.ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Title,Author,Price,BookLanguage,NoP,reference}]" DataTable="[out_dtCarturestiBooks]" DisplayName="Add Data Row to Carturesti Data Table" sap:VirtualizedContainerService.HintSize="534,218" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
-                    <ui:LogMessage DisplayName="Log Message - Count the current book" sap:VirtualizedContainerService.HintSize="534,168" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Done with book number: &quot; + (CurrentIndex+1).ToString]" />
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Title,Author,Price,BookLanguage,NoP,reference}]" DataTable="[out_dtCarturestiBooks]" DisplayName="Add Data Row to Carturesti Data Table" sap:VirtualizedContainerService.HintSize="536,218" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                    <ui:LogMessage DisplayName="Log Message - Count the current book" sap:VirtualizedContainerService.HintSize="536,168" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Done with book number: &quot; + (CurrentIndex+1).ToString]" />
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>

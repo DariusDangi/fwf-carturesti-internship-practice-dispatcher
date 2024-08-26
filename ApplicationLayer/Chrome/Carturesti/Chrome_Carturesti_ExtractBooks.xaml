@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>870,800</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1056,685</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Chrome_Carturesti_ExtractBooks_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,45 +113,38 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Having the prerequisites completed, aka applied filters, this workflow will extract X books from Carturesti page." DisplayName="Chrome_Carturesti_ExtractBooks" sap:VirtualizedContainerService.HintSize="512,735" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Having the prerequisites completed, aka applied filters, this workflow will extract X books from Carturesti page." DisplayName="Chrome_Carturesti_ExtractBooks" sap:VirtualizedContainerService.HintSize="496,620" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Extract Books" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Getting all the required books from Carturesti.&quot;]" />
-    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Chrome-Carturesti-Extract Books" sap:VirtualizedContainerService.HintSize="450,432" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[io_BrowserUi]" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[io_BrowserUi]" ScopeGuid="751c51ca-eef2-4e5c-bec4-64214b7260d5" Version="V2">
+    <ui:LogMessage DisplayName="Log Message Extract Books" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Getting all the required books from Carturesti.&quot;]" />
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" DisplayName="Chrome-Carturesti-Extract Books" sap:VirtualizedContainerService.HintSize="434,317" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[io_BrowserUi]" InteractionMode="DebuggerApi" OpenMode="Never" OutUiElement="[io_BrowserUi]" ScopeGuid="751c51ca-eef2-4e5c-bec4-64214b7260d5" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,272" sap2010:WorkflowViewState.IdRef="Sequence_3">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[out_dtBooksURL]" DelayBefore="[cint(in_Config(&quot;DelayForFilters&quot;).ToString)]" DisplayName="Extract Carturesti Books URLs" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='BooksURL'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='prod-grid-box' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='img' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="354,182" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="[cint(in_Config(&quot;BooksLimit&quot;).ToString)]" ScopeIdentifier="751c51ca-eef2-4e5c-bec4-64214b7260d5" Version="V3">
-              <uix:NExtractData.NextLink>
-                <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177" CVScreenId="cc659bea-af3b-4bb6-b053-2fd7696c4e9f" CvElementArea="1502, 326, 21, 24" CvType="ArrowButton" DesignTimeRectangle="1498, 325, 30, 27" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aaname='' parentid='coloana-produse' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='' parentid='coloana-produse' tag='I' type='' class='material-icons' check:innerText='' /&gt;" Guid="eec47196-5a4d-4f99-8fe1-58da39c79e10" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="cc659bea-af3b-4bb6-b053-2fd7696c4e9f" CvTextArea="390, 110, 81, 16" CvTextArgument="PRODUSE" CvType="Text" DesignTimeRectangle="390, 108, 82, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl class='coco' parentid='buton-produse' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='coco' parentid='buton-produse' tag='SPAN' type='' aaname='Produse' check:innerText='PRODUSE' /&gt;" Guid="441bbab2-7c6b-48e7-904b-7ee40197b1c2" SearchSteps="FuzzySelector, CV" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NExtractData.NextLink>
-              <uix:NExtractData.Target>
-                <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177" DesignTimeRectangle="570, 370, 975, 2244" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='cartu-grid-list' parentid='coloana-produse' tag='DIV' /&gt;" Guid="5437ea74-d5e6-44c3-8df7-03078cff84b0" InformativeScreenshot="baf467346174046bef80cf03481c565c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
-              </uix:NExtractData.Target>
-            </uix:NExtractData>
-          </Sequence>
+          <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[out_dtBooksURL]" DelayBefore="[cint(in_Config(&quot;DelayForFilters&quot;).ToString)]" DisplayName="Extract Carturesti Books URLs" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='BooksURL'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='prod-grid-box' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='img' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="[cint(in_Config(&quot;BooksLimit&quot;).ToString)]" ScopeIdentifier="751c51ca-eef2-4e5c-bec4-64214b7260d5" Version="V3">
+            <uix:NExtractData.NextLink>
+              <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177?stock_label=in-stoc,la-comanda,stoc-limitat&amp;data_publicarii=2023&amp;per-page=60&amp;sort-by=price%20asc" CVScreenId="ce87a303-30ae-490e-8af5-7d26d08ea5c9" CvElementArea="1502, 326, 21, 24" CvType="ArrowButton" DesignTimeRectangle="1498, 325, 30, 27" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl aaname='' parentid='coloana-produse' tag='I' type='' class='material-icons' check:innerText='' /&gt;" Guid="96eadb74-8532-4dfb-ad15-0b677bb6e0cf" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*Cărturești' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable.Anchors>
+                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                    <uix:Target CVScreenId="ce87a303-30ae-490e-8af5-7d26d08ea5c9" CvElementArea="1358, 261, 171, 29" CvTextArea="1361, 248, 54, 13" CvTextArgument="Pe pagina" CvType="InputBox" DesignTimeRectangle="1342, 244, 192, 57" FuzzySelectorArgument="&lt;webctrl tag='GRID-FILTER-PERPAGE' type='' class='' aaname=' ' check:innerText='Pe pagină&amp;#xA;60' /&gt;" Guid="abe612b1-73a1-4ab2-b009-382d84bd1faa" SearchSteps="FuzzySelector, CV" />
+                  </scg:List>
+                </uix:TargetAnchorable.Anchors>
+              </uix:TargetAnchorable>
+            </uix:NExtractData.NextLink>
+            <uix:NExtractData.Target>
+              <uix:TargetAnchorable BrowserURL="https://carturesti.ro/raft/fictiune-177?stock_label=in-stoc,la-comanda,stoc-limitat&amp;data_publicarii=2023&amp;per-page=60&amp;sort-by=price%20asc" DesignTimeRectangle="570, 370, 975, 4488" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='cartu-grid-list' parentid='coloana-produse' tag='DIV' /&gt;" Guid="d25a1df4-b44f-44f3-b489-23f30644ed5e" InformativeScreenshot="baf467346174046bef80cf03481c565c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cărți de ficțiune românești - Cărturești' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+            </uix:NExtractData.Target>
+          </uix:NExtractData>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALASURBVDhPlZJdSJNRGMdPmehUZCURm6MIgogUi1JM66JPwaCiiFLDvJHUQpqg75zbnEqWbjMWauzd99ym7+bU9qHu06zcNHWGeBGEFF0G3XRRqODped+pLaWLHvhznsN5/r/znA/0r7CMVSL/bNueoRD/iD1QVUH5HlPDwSap+7V838FdPqS3dG1UbkTkowC9MFQjFVWeYHI9PGTxVpbYgo8MI2/qPrmmGlc9ERH2hEU/3G+lnsC0vGY83MEbGCOSGXMo2oyCUWGi/lXpDZu/1jQ4wV92vhOsjUbEeHwGNN0KYyv2vm/F7giBLf7yn53WU4tK6sJ9BqAauYa67ZfZHX0nolSoEgejz3Bw7gn2zrSAUYKdU3XY7CvFysFCLDXyMEGmYQHJXu805/EZgNJ2HintF9kiDWdBqN6LFbbTuC9Qhg3e27jLnoclBi6YUnG9Kgk3qFIgZ+FGNQ3I56NfK8sIEqR3lXLFWs4SQaZAEQuUjAkorieTQDAHAL22KRogswCgpjMB6T0l+TJz7rhIfWCFoM1goHchVKmQA3CbebMDBkD5qzNkfblBRX/ugETHWaYXGZM63rBdcYDeoaJzT41Zs+TIrZNiDXd+C7DDFK94gONmQbspe550Xc8XazL/H+CYlKZD4nxOnQ00G3hf6UX6xmPj30YBXGpMAGCeEQDt2mxkGa04LreecTVp9q/GjGkbz7VTWwDogAHQ0TNUjDTuOxyxLpN5xpj+3QEBTyyEDmTmghig21EEl1nMlmh5C7Qxdn4W/Da6ePM4sbkQdm7Wcb/Br/XpnfcuMQDbRBXyzbUlKqyFDRIN9zNBpq/Xw070MQSqNDBlrEl0vC/t5qxheX/BA727LCc028PCGDN+JjyTCvRhKby713E1S27Ne9lmPPq9xXh4taM/Z1Jpv1Krdd09Fl40JdGmP0aEfgNG9fml3fDjCgAAAABJRU5ErkJggg==" InformativeScreenshot="777736078e00496d801dc07d2c5635af.jpg" Selector="&lt;html app='chrome.exe' title='Cărți românești | Cărți noi și interesante - Cărturești' /&gt;" Title="Cărți românești | Cărți noi și interesante - Cărturești" Url="https://carturesti.ro/raft/carte-109?per-page=60" />
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALASURBVDhPlZJdSJNRGMdPmehUZCURm6MIgogUi1JM66JPwaCiiFLDvJHUQpqg75zbnEqWbjMWauzd99ym7+bU9qHu06zcNHWGeBGEFF0G3XRRqODped+pLaWLHvhznsN5/r/znA/0r7CMVSL/bNueoRD/iD1QVUH5HlPDwSap+7V838FdPqS3dG1UbkTkowC9MFQjFVWeYHI9PGTxVpbYgo8MI2/qPrmmGlc9ERH2hEU/3G+lnsC0vGY83MEbGCOSGXMo2oyCUWGi/lXpDZu/1jQ4wV92vhOsjUbEeHwGNN0KYyv2vm/F7giBLf7yn53WU4tK6sJ9BqAauYa67ZfZHX0nolSoEgejz3Bw7gn2zrSAUYKdU3XY7CvFysFCLDXyMEGmYQHJXu805/EZgNJ2HintF9kiDWdBqN6LFbbTuC9Qhg3e27jLnoclBi6YUnG9Kgk3qFIgZ+FGNQ3I56NfK8sIEqR3lXLFWs4SQaZAEQuUjAkorieTQDAHAL22KRogswCgpjMB6T0l+TJz7rhIfWCFoM1goHchVKmQA3CbebMDBkD5qzNkfblBRX/ugETHWaYXGZM63rBdcYDeoaJzT41Zs+TIrZNiDXd+C7DDFK94gONmQbspe550Xc8XazL/H+CYlKZD4nxOnQ00G3hf6UX6xmPj30YBXGpMAGCeEQDt2mxkGa04LreecTVp9q/GjGkbz7VTWwDogAHQ0TNUjDTuOxyxLpN5xpj+3QEBTyyEDmTmghig21EEl1nMlmh5C7Qxdn4W/Da6ePM4sbkQdm7Wcb/Br/XpnfcuMQDbRBXyzbUlKqyFDRIN9zNBpq/Xw070MQSqNDBlrEl0vC/t5qxheX/BA727LCc028PCGDN+JjyTCvRhKby713E1S27Ne9lmPPq9xXh4taM/Z1Jpv1Krdd09Fl40JdGmP0aEfgNG9fml3fDjCgAAAABJRU5ErkJggg==" InformativeScreenshot="777736078e00496d801dc07d2c5635af.jpg" Selector="&lt;html app='chrome.exe' title='*Cărturești' /&gt;" Title="Cărți românești | Cărți noi și interesante - Cărturești" Url="https://carturesti.ro/raft/fictiune-177?per-page=60&amp;sort-by=price%20asc" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
