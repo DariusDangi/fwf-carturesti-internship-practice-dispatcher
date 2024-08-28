@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Uin01l4md0a2Q-sEIGE0fg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://carturesti.ro/carte/guzanja-2653858962?p=60" CVScreenId="6859931b-fa09-4e92-aaf9-4f3ba230b86e" CvTextArea="946, 453, 22, 14" CvType="AnyWordGroup" DesignTimeRectangle="947, 450, 20, 21" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;html app='chrome.exe' title='Guzanja - Simona Poclid' /&gt;&lt;webctrl tag='DIV' isleaf='1' parentclass='productAttr' /&gt;" Guid="393398db-e6cd-4acb-8335-949d1d5e0f39" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Guzanja - Simona Poclid' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="6859931b-fa09-4e92-aaf9-4f3ba230b86e" CvTextArea="876, 453, 67, 17" CvTextArgument="Nr. pagini:" CvType="Text" DesignTimeRectangle="877, 450, 70, 21" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Nr. pagini: ' parentclass='productAttr' /&gt;" Guid="fbfae723-476e-425b-bdc8-f711fee122e7" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b9186a7b78a2e63c834a91dfdd5c509a.png" xmlns="">0I8amYJtUZkugW1kul2HsGw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

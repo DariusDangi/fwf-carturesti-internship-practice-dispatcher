@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Get NoP",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "hfQEUjwG0UGt8ccf_p9G7g",
+  "Reference": "ea0dxf3yFE-knG7GmiW4LQ/hfQEUjwG0UGt8ccf_p9G7g",
+  "ParentRef": "ea0dxf3yFE-knG7GmiW4LQ/EJoyHv1MykaF4BrfWIK7hA",
+  "Created": "2024-08-21T08:57:45.80404Z",
+  "Updated": "2024-08-21T08:57:45.80404Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
